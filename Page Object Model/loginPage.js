@@ -1,4 +1,4 @@
-class Login {
+class loginPage {
    // Navigates to the Sauce Demo login page
   visit() {
     cy.visit("https://www.saucedemo.com/");
@@ -27,4 +27,4 @@ class Login {
     }
 }
 
-export default Login;
+export default loginPage;

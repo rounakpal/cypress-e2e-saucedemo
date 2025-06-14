@@ -1,4 +1,5 @@
-import Login from "../Page Object Model/Login";
+import LoginPage from "../../Page Object Model/loginPage.js";
+const loginPage = new LoginPage();
 // Test suite for the Login Page functionality
 describe("Test Scenario for the Login Page", () => {
   let loginData;
@@ -11,7 +12,7 @@ describe("Test Scenario for the Login Page", () => {
   });
   // Visit the login page before each test
   beforeEach(() => {
-    Login.visit();
+    loginPage.visit();
   });
   // Test: Successful login with valid credentials
   it("Should login successfully with valid credentials", () => {
@@ -29,8 +30,6 @@ describe("Test Scenario for the Login Page", () => {
   });
   // Test: Validation error for  empty username and password fields
   it("Should give validation error for empty username and password fields", () => {
-    loginPage.setusername("");
-    loginPage.setpassword("");
     loginPage.clickLogin();
     loginPage.verifyLoginError();
   });
