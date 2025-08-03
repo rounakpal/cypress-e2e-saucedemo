@@ -1,7 +1,7 @@
 import LoginPage from "../../Page Object Model/loginPage.js";
 const loginPage = new LoginPage();
 // Test suite for the Login Page functionality
-describe("Test Scenario for the Login Page", () => {
+describe("Verify the login functionality", () => {
   let loginData;
 
   // Load login data from fixture before all tests
@@ -35,8 +35,26 @@ describe("Test Scenario for the Login Page", () => {
   });
   // Test: Validation error for empty password field and valid user name
   it("Should give validation error for the empty password field and valid user name", () => {
-     loginPage.setusername("Admin");
+    loginPage.setusername("Admin");
     loginPage.clickLogin();
     loginPage.verifyLoginError();
+  });
+});
+
+describe("Verify the UI of the Login page ", () => {
+  it("Verify that the logo is visible to the user", () => {
+    loginPage.logo();
+  });
+
+  it("Verify that the username is visible to the user and the placeholder in the username field is correct", () => {
+    loginPage.username(); 
+  });
+
+  it('Verify that the Password field is visible to the user and the placeholder in the password field is correct', () => {
+      loginPage.password(); 
+  });
+
+  it('Verify that the Login button is visible to the user and the background off the login button is correct', () => {
+    loginPage.loginButton(); 
   });
 });

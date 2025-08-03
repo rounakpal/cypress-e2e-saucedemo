@@ -25,6 +25,24 @@ class loginPage {
         cy.url().should("include", "/inventory.html");
         cy.get(".title").should("contain", "Products");
     }
+
+    logo(){
+      cy.get(".login_logo").should("exist").and ("be.visible");
+    }
+
+    username(){
+      cy.get('#user-name').should('be.visible').and('have.attr', 'placeholder', 'Username')
+    }
+
+    password(){
+      cy.get("#password").should('be.visible').and('have.attr', 'placeholder', 'Password')
+      cy.get('[data-test="password"]').invoke('attr', 'type').should('eq', 'password')
+    }
+
+    loginButton(){
+      cy.get('#login-button').should('be.visible').and('contain', 'Login')
+      cy.get('login-button').should('have.css', 'background-color', 'rgb(61, 220, 132)')
+    }
 }
 
 export default loginPage;
