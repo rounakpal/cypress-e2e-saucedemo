@@ -41,7 +41,7 @@ class loginPage {
 
     loginButton(){
       cy.get('#login-button').should('be.visible').and('contain', 'Login')
-      cy.get('login-button').should('have.css', 'background-color', 'rgb(61, 220, 132)')
+      cy.get('#login-button').should('have.css', 'background-color', 'rgb(61, 220, 145)')
     }
 }
 

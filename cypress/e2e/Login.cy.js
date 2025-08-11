@@ -1,6 +1,9 @@
 import LoginPage from "../../Page Object Model/loginPage.js";
 const loginPage = new LoginPage();
 // Test suite for the Login Page functionality
+ beforeEach(() => {
+    loginPage.visit();
+  });
 describe("Verify the login functionality", () => {
   let loginData;
 
@@ -10,10 +13,7 @@ describe("Verify the login functionality", () => {
       loginData = data;
     });
   });
-  // Visit the login page before each test
-  beforeEach(() => {
-    loginPage.visit();
-  });
+
   // Test: Successful login with valid credentials
   it("Should login successfully with valid credentials", () => {
     loginPage.setusername(loginData.validUser.username);

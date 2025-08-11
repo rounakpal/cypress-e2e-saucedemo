@@ -33,6 +33,7 @@ pageStatus() {
   menuIcon() {
     cy.get("#react-burger-menu-btn").should("exist").and("be.visible");
   }
+  
 }
 
 export default productPage;
