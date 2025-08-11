@@ -3,12 +3,14 @@ import LoginPage from "../../Page Object Model/loginPage.js";
 import SearchProduct from "../../Page Object Model/searchProduct.js";
 import MenuItems from "../../Page Object Model/menu.js"
 import AllProducts from "../../Page Object Model/allProducts.js"
-
+import Footer from "../../Page Object Model/footer.js"
 const loginPage = new LoginPage();
 const productPage = new ProductPage();
 const searchProduct = new SearchProduct(); 
 const menu = new MenuItems(); 
 const allProducts = new AllProducts(); 
+const footer = new Footer(); 
+
 let loginData;
 // Global before hook
 before(() => {
@@ -108,7 +110,7 @@ describe('Verify the menu icon functionality', () => {
   });
 });
 
-describe.only('Verify that the products are visible with all detail ', () => {
+describe('Verify that the products are visible with all detail ', () => {
   it('Verify that all the products is visible to the user', () => {
     allProducts.allProductsVisibility(); 
   });
@@ -116,4 +118,18 @@ describe.only('Verify that the products are visible with all detail ', () => {
   it('Verify that user clicks on the Add to cart button', () => {
     allProducts.addCart(); 
   });
+});
+
+describe('Verify the footer of the page', () => {
+    it('Verify that the footer is visible in the page', () => {
+        footer.visible();       
+    });
+
+    it('Verify that the social media icon is visible to the user', () => {
+      footer.iconVisible(); 
+    });
+
+    it('Verify that the copy right text is visible to the user', () => {
+      footer.copyRightText(); 
+    });
 });
