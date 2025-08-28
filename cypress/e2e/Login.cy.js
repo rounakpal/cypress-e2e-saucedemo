@@ -1,4 +1,5 @@
 import LoginPage from "../../Page Object Model/loginPage.js";
+
 const loginPage = new LoginPage();
 // Test suite for the Login Page functionality
  beforeEach(() => {
@@ -41,19 +42,24 @@ describe("Verify the login functionality", () => {
   });
 });
 
+// Test suite for verifying UI elements of the Login page
 describe("Verify the UI of the Login page ", () => {
+  // Test: Logo is visible
   it("Verify that the logo is visible to the user", () => {
     loginPage.logo();
   });
 
+  // Test: Username field is visible and has correct placeholder
   it("Verify that the username is visible to the user and the placeholder in the username field is correct", () => {
     loginPage.username(); 
   });
 
+  // Test: Password field is visible and has correct placeholder
   it('Verify that the Password field is visible to the user and the placeholder in the password field is correct', () => {
       loginPage.password(); 
   });
 
+    // Test: Login button is visible and has correct background
   it('Verify that the Login button is visible to the user and the background off the login button is correct', () => {
     loginPage.loginButton(); 
   });

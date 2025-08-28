@@ -1,11 +1,16 @@
+// Page Object Model class for handling search/sort functionality on the product page
 class searchProduct {
+   // Verifies that the product sort dropdown is enabled
   enableDropodown() {
     cy.get(".product_sort_container").should("not.be.disabled");
   }
+
+  // Verifies that the default option in the sort dropdown is 'Name (A to Z)'
   defaultOption() {
     cy.get(".product_sort_container").should("have.value", "az");
   }
 
+  // Verifies that all expected options are present in the sort dropdown
   expectedOption() {
     const expectedOption = [
       "Name (A to Z)",
@@ -25,7 +30,7 @@ class searchProduct {
           .true;
       });
   }
-
+// Verifies that products are sorted by name in ascending order (A to Z)
   sortBYAscendingOrder() {
     cy.get(".product_sort_container").select("Name (A to Z)");
     cy.get(".inventory_item_name").then(($names) => {
@@ -38,6 +43,7 @@ class searchProduct {
     });
   }
 
+// Verifies that products are sorted by name in descending order (Z to A)
   sortByDescendingOrder() {
     cy.get(".product_sort_container").select("Name (Z to A)");
     cy.get(".inventory_item_name").then(($names) => {
@@ -49,7 +55,7 @@ class searchProduct {
       expect(nameTexts).to.deep.equal(sorted);
     });
   }
-
+  // Verifies that products are sorted by price from low to high
   sortByLowPrice() {
     cy.get(".product_sort_container").select("Price (low to high)");
 
@@ -62,7 +68,7 @@ class searchProduct {
       expect(priceValues).to.deep.equal(sorted);
     });
   }
-
+  // Verifies that products are sorted by price from high to low
   sortByHighPrice() {
     cy.get(".product_sort_container").select("Price (high to low)");
 

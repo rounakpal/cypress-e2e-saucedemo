@@ -26,19 +26,23 @@ class loginPage {
         cy.get(".title").should("contain", "Products");
     }
 
+    // Verifies that the login page logo is visible
     logo(){
       cy.get(".login_logo").should("exist").and ("be.visible");
     }
 
+    // Verifies that the username field is visible and has correct placeholder
     username(){
       cy.get('#user-name').should('be.visible').and('have.attr', 'placeholder', 'Username')
     }
 
+    // Verifies that the password field is visible, has correct placeholder, and is of type password
     password(){
       cy.get("#password").should('be.visible').and('have.attr', 'placeholder', 'Password')
       cy.get('[data-test="password"]').invoke('attr', 'type').should('eq', 'password')
     }
 
+     // Verifies that the login button is visible, contains correct text, and has correct background color
     loginButton(){
       cy.get('#login-button').should('be.visible').and('contain', 'Login')
       cy.get('#login-button').should('have.css', 'background-color', 'rgb(61, 220, 145)')
