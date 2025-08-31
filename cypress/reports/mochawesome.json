@@ -1,0 +1,258 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-31T07:44:31.051Z",
+    "end": "2025-08-31T07:44:41.692Z",
+    "duration": 10641,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4fac91c0-1679-426f-828d-bb8fe77203fe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de85fd7c-974e-4952-a0b8-89dcdaa29358",
+          "title": "Verify the login functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login successfully with valid credentials",
+              "fullTitle": "Verify the login functionality Should login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 3391,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.setusername(loginData.validUser.username);\nloginPage.setpassword(loginData.validUser.password);\nloginPage.clickLogin();\nloginPage.verifyLoginSuccess();",
+              "err": {},
+              "uuid": "6bfc8157-3616-47dc-bd48-3bcd947d1abd",
+              "parentUUID": "de85fd7c-974e-4952-a0b8-89dcdaa29358",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should give validation error with invalid credentials",
+              "fullTitle": "Verify the login functionality Should give validation error with invalid credentials",
+              "timedOut": null,
+              "duration": 1269,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.setusername(loginData.invalidUser.username);\nloginPage.setpassword(loginData.invalidUser.password);\nloginPage.clickLogin();\nloginPage.verifyLoginError();",
+              "err": {},
+              "uuid": "66c5f420-df3d-47bd-b381-0d48b9db3d05",
+              "parentUUID": "de85fd7c-974e-4952-a0b8-89dcdaa29358",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should give validation error for empty username and password fields",
+              "fullTitle": "Verify the login functionality Should give validation error for empty username and password fields",
+              "timedOut": null,
+              "duration": 390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.clickLogin();\nloginPage.verifyLoginError();",
+              "err": {},
+              "uuid": "5300563e-5132-4ed6-8418-929c9091f99d",
+              "parentUUID": "de85fd7c-974e-4952-a0b8-89dcdaa29358",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should give validation error for the empty password field and valid user name",
+              "fullTitle": "Verify the login functionality Should give validation error for the empty password field and valid user name",
+              "timedOut": null,
+              "duration": 553,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.setusername(\"Admin\");\nloginPage.clickLogin();\nloginPage.verifyLoginError();",
+              "err": {},
+              "uuid": "b933acd5-f11f-4052-8fa8-46be97a5f6c0",
+              "parentUUID": "de85fd7c-974e-4952-a0b8-89dcdaa29358",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6bfc8157-3616-47dc-bd48-3bcd947d1abd",
+            "66c5f420-df3d-47bd-b381-0d48b9db3d05",
+            "5300563e-5132-4ed6-8418-929c9091f99d",
+            "b933acd5-f11f-4052-8fa8-46be97a5f6c0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5603,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2935e2a4-6bb6-4901-97b8-2d27968094b6",
+          "title": "Verify the UI of the Login page ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that the logo is visible to the user",
+              "fullTitle": "Verify the UI of the Login page  Verify that the logo is visible to the user",
+              "timedOut": null,
+              "duration": 589,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.logo();",
+              "err": {},
+              "uuid": "9ab3754d-395c-4d2d-88ed-ff3685b31155",
+              "parentUUID": "2935e2a4-6bb6-4901-97b8-2d27968094b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the username is visible to the user and the placeholder in the username field is correct",
+              "fullTitle": "Verify the UI of the Login page  Verify that the username is visible to the user and the placeholder in the username field is correct",
+              "timedOut": null,
+              "duration": 256,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.username();",
+              "err": {},
+              "uuid": "7832c786-9fd9-488a-8a06-6edfac5f410d",
+              "parentUUID": "2935e2a4-6bb6-4901-97b8-2d27968094b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the Password field is visible to the user and the placeholder in the password field is correct",
+              "fullTitle": "Verify the UI of the Login page  Verify that the Password field is visible to the user and the placeholder in the password field is correct",
+              "timedOut": null,
+              "duration": 465,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.password();",
+              "err": {},
+              "uuid": "5652743e-5d23-4601-bebc-3f43ffbe1fa4",
+              "parentUUID": "2935e2a4-6bb6-4901-97b8-2d27968094b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the Login button is visible to the user and the background off the login button is correct",
+              "fullTitle": "Verify the UI of the Login page  Verify that the Login button is visible to the user and the background off the login button is correct",
+              "timedOut": null,
+              "duration": 328,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginButton();",
+              "err": {},
+              "uuid": "5835959d-a20a-479c-9515-7611b543b2eb",
+              "parentUUID": "2935e2a4-6bb6-4901-97b8-2d27968094b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ab3754d-395c-4d2d-88ed-ff3685b31155",
+            "7832c786-9fd9-488a-8a06-6edfac5f410d",
+            "5652743e-5d23-4601-bebc-3f43ffbe1fa4",
+            "5835959d-a20a-479c-9515-7611b543b2eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

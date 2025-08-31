@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-31T08:37:57.819Z",
+    "end": "2025-08-31T08:38:15.291Z",
+    "duration": 17472,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f4bd6c67-5922-4fd6-9f9a-1da736181c46",
+      "title": "",
+      "fullFile": "cypress\\e2e\\thankyou.cy.js",
+      "file": "cypress\\e2e\\thankyou.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5887f284-656a-490f-8ae7-6e3323de65f6",
+          "title": "Verify that fuctionality and UI of thank you page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that the page heading is visible to the user",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the page heading is visible to the user",
+              "timedOut": null,
+              "duration": 3513,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.pageheading();",
+              "err": {},
+              "uuid": "194d754c-87f3-4289-a43d-9afde1ee9855",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the success message is visible to the user",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the success message is visible to the user",
+              "timedOut": null,
+              "duration": 2622,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.successMessage();",
+              "err": {},
+              "uuid": "100ed19d-9f78-445a-946c-8f2169141538",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the dispatch message is visible to the user",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the dispatch message is visible to the user",
+              "timedOut": null,
+              "duration": 2168,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.dispatchMessage();",
+              "err": {},
+              "uuid": "3e140555-2fe1-4f1d-9305-ce5951e87015",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the checkmate icon is visible to the user",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the checkmate icon is visible to the user",
+              "timedOut": null,
+              "duration": 2392,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.checkmateIcon();",
+              "err": {},
+              "uuid": "1a55d13b-32e0-4c05-ac9d-6bda29006d89",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the `back to home` button is visible to the user",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the `back to home` button is visible to the user",
+              "timedOut": null,
+              "duration": 2162,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.backToHomebutton();",
+              "err": {},
+              "uuid": "6f84c5be-246a-446b-b656-380eb8780702",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the `back to home` button is clickable",
+              "fullTitle": "Verify that fuctionality and UI of thank you page Verify that the `back to home` button is clickable",
+              "timedOut": null,
+              "duration": 2280,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "thankyou.clickBackToHomeButton();",
+              "err": {},
+              "uuid": "4f403819-35a0-4a47-92f0-48f24f7d3ad7",
+              "parentUUID": "5887f284-656a-490f-8ae7-6e3323de65f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "194d754c-87f3-4289-a43d-9afde1ee9855",
+            "100ed19d-9f78-445a-946c-8f2169141538",
+            "3e140555-2fe1-4f1d-9305-ce5951e87015",
+            "1a55d13b-32e0-4c05-ac9d-6bda29006d89",
+            "6f84c5be-246a-446b-b656-380eb8780702",
+            "4f403819-35a0-4a47-92f0-48f24f7d3ad7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15137,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
